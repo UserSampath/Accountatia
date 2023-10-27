@@ -1,0 +1,188 @@
+body {
+    font-family: sans-serif;
+    background-image: url(image2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+h1,
+h3 {
+    margin-left: 30px;
+}
+
+#main {
+    background-color: white;
+    margin: auto;
+    width: 90%;
+}
+
+#main2 {
+    width: 80%;
+    height: auto;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+#main3 {
+    width: 80%;
+    height: auto;
+    margin: auto;
+    display: block;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+#incomes,
+#expenses1,
+#expenses2,
+#expenses3,
+#expenses4,
+#assets1,
+#assets2,
+#liabilities1,
+#liabilities2 {
+    margin: 20px;
+}
+
+#header,
+#main4,
+#main5 {
+    width: 100%;
+    text-align: center;
+}
+
+#header1,
+#header2,
+#header3,
+#header4,
+#header5,
+#header6 {
+    margin-bottom: -10px;
+    font-size: larger;
+}
+
+#name,
+#currency,
+#date,
+#closingStock {
+    width: 30%;
+    margin-top: 3%;
+}
+
+#buttonField,
+#buttonField2 {
+    margin: 20px;
+    text-align: right;
+}
+
+#submit,
+#check,
+#back {
+    border: 1px solid black;
+    font-weight: bold;
+    font-size: 17px;
+    height: 37px;
+    width: 90px;
+    background-color: black;
+    color: white;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-right: 40px;
+}
+
+#submit:hover,
+#check:hover,
+#back:hover {
+    background-color: gray;
+    color: black;
+    border: 1px solid gray;
+    font-weight: bold;
+}
+
+.text-name {
+    color: rgb(102, 101, 101);
+    margin: 0px;
+    font-size: 13px;
+}
+
+.text-box {
+    background-color: rgba(226, 224, 224, 0.5);
+    border: 1px solid rgb(231, 230, 230);
+    border-radius: 0%;
+    height: 20px;
+    width: 60px;
+    margin-top: 5px;
+    text-align: center;
+}
+
+span {
+    color: red;
+}
+
+#table,
+#table th,
+#table td {
+    border: black 2px solid;
+    border-collapse: collapse;
+    color: black;
+    margin: 20px 5px;
+    padding: 5px;
+    font-size: 100%;
+}
+
+#table2,
+#table th {
+    border-left: black 2px solid;
+    border-right: black 2px solid;
+    border-collapse: collapse;
+    color: black;
+    margin: 20px 5px;
+    padding: 5px;
+    font-size: 100%;
+}
+
+#table3,
+#table3 th,
+#table3 td,
+#table3 tr {
+    border-left: black 2px solid;
+    border-right: black 2px solid;
+    border-collapse: collapse;
+    color: black;
+    margin: 20px 5px;
+    padding: 5px;
+    font-size: 100%;
+}
+
+#div-table,
+#div-table2,
+#div-table3 {
+    margin-top: 20px;
+    margin-left: 180px;
+    margin-bottom: 40px;
+}
+
+.cd {
+    text-align: right;
+    border-radius: 0px;
+    border: none;
+}
+
+#r1c1,
+#r1c2,
+#r1c3 {
+    border-top: 2px black solid;
+}
+
+.lr {
+    border-right: 2px black solid;
+    border-left: 2px black solid;
+}
+
+.lru {
+    border-right: 2px black solid;
+    border-left: 2px black solid;
+    border-bottom: 2px black solid;
+}

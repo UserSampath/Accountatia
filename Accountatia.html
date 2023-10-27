@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accountatia</title>
+    <link rel="stylesheet" href="Accountatia.css">
+
+</head>
+
+<body>
+    <h1 style="font-size: 50px; color: aliceblue;">Accountatia</h1>
+
+    <h3 style="margin-top:-20px; font-size: 25px;color: aliceblue;">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspMake your life easy</h3>
+
+    <div id="main">
+        <div style="height: 20px;width: 100%;"></div>
+        <div id="main2">
+            <div id="header">
+                <h1>Trial Balance </h1>
+            </div>
+
+            <div id="name">
+                <h5 class="text-name">Entity Name <span>*</span></h5>
+                <input style="width: 90%;" id="name1" class="text-box" type="text" name="name" />
+            </div>
+
+            <div id="currency">
+                <h5 class="text-name">Currency <span>*</span></h5>
+                <select style="width: 70%;" class="text-box" id="currency1" name="Currency">
+                    <option value="Default">---Select---</option>
+                    <option value="LKR">LKR</option>
+                    <option value="USD">USD</option>
+                    <option value="GBP">GBP</option>
+                    <option value="EUR">EUR</option>
+                    <option value="JPY">JPY</option>
+                    <option value="CNY">CNY</option>
+                    </select>
+            </div>
+            <div id="date">
+                <h5 class="text-name">For the day <span>*</span></h5>
+                <input style="width: 70%;" type="date" class="text-box" id="date1" name="For the day">
+            </div>
+        </div>
+
+
+        <div id="div-table">
+            <table id="table">
+                <tr>
+                    <th style="width: 400px;"> </th>
+                    <th style="width: 130px;">Debit</th>
+                    <th style="width: 130px;">Credit</th>
+                </tr>
+                <tr>
+                    <td id="">Equity</td>
+                    <td> <input type="text" name="" class="cd" id="d1" value="0"></td>
+                    <td> <input type="text" name="" class="cd" id="c1" value="0"></td>
+                </tr>
+                <tr>
+                    <td id="">Sales</td>
+                    <td> <input type="text" name="" class="cd" id="d2" value="0"> </td>
+                    <td> <input type="text" name="" class="cd" id="c2" value="0"></td>
+                </tr>
+                <tr>
+                    <td id="">Sales Return</td>
+                    <td> <input type="text" name="" class="cd" id="d3" value="0"></td>
+                    <td> <input type="text" name="" class="cd" id="c3" value="0"></td>
+                </tr>
+                <tr>
+                    <td id="">Carriage Inwards</td>
+                    <td> <input type="text" name="" class="cd" id="d4" value="0"></td>
+                    <td> <input type="text" name="" class="cd" id="c4" value="0"></td>
+                </tr>
+                <tr>
+                    <td id="">Purchases</td>
+                    <td> <input type="text" name="" class="cd" id="d5" value="0"></td>
+                    <td> <input type="text" name="" class="cd" id="c5" value="0"></td>
+                </tr>
+                <tr>
+                    <td id="">Freight Charges</td>
+                    <td> <input type="text" name="" class="cd" id="d6" value="0"></td>
+                    <td> <input type="text" name="" class="cd" id="c6" value="0"></td>
+                </tr>
+                <tr>
+                    <td id=""> Custom Duty</td>
+                    <td> <input type="text" name="" class="cd" id="d7" value="0"></td>
+                    <td> <input type="text" name="" class="cd" id="c7" value="0"></td>
+                </tr>
+                <tr>
+                    <td id="">Purchase Return</td>
+                    <td> <input type="text" name="" class="cd" id="d8" value="0"> </td>
+                    <td> <input type="text" name="" class="cd" id="c8" value="0"></td>
+                </tr>
+                <tr>
+                    <td id="">Opening Stock</td>
+                    <td> <input type="text" name="" class="cd" id="d9" value="0"></td>
+                    <td> <input type="text" name="" class="cd" id="c9" value="0"></td>
+                </tr>
+                <tr>
+                    <td id="">Drawings</td>
+                    <td> <input type="text" name="" class="cd" id="d10" value="0"></td>
+                    <td> <input type="text" name="" class="cd" id="c10" value="0"></td>
+                </tr>
+                <tr>
+                    <td id="" style="text-align: center;">Total</td>
+                    <td id="debitTotalCell" style="font-weight: bold;text-align: right;"> </td>
+                    <td id="creditTotalCell" style="font-weight: bold; text-align: right;"> </td>
+                </tr>
+            </table>
+
+
+            <div id="closingStock">
+                <h5 class="text-name">Closing Stock :</h5>
+                <input style="width: 50%; text-align: right;" id="closingStock1" class="text-box" type="text" name="name" value="0" />
+            </div>
+        </div>
+
+        <div id="main3" style="margin-top: 50px;">
+
+            <div id="incomes">
+                <h5 class="text-name">Other Incomes </h5>
+                <select style="width: 70%;" class="text-box" onchange="insertFunc(this.value,'incomes')" name="incomes">
+                    <option value="Default">---Select---</option>
+                    <option value="Rent Received" >Rent received</option>
+                    <option value="Profit On Disposal">Profit on Disposal</option>
+                    <option value="Discount Received">Discount Received</option>
+                    <option value="Interest Received">Interest Received</option>                   
+                    <option value="Commision Received">Commision Received</option>
+                </select>
+            </div>
+            <div id="expenses1">
+                <h5 class="text-name"> Administrative Expenses </h5>
+                <select style="width: 70%;" class="text-box" onchange="insertFunc(this.value,'administrative expenses')" name="incomes">
+                    <option value="Default">---Select---</option>
+                    <option value="Electricity" >Electricity</option>
+                    <option value="Water" >Water </option>             
+                    <option value="Office expense" > Office expense</option>
+                    <option value="Salary" >Salary </option>
+                    <option value="Rates" > Rates</option>
+                    <option value="Rent Expenses" >Rent Expenses </option>             
+                    <option value="Insurance" > Insurance</option>
+                    <option value="Depreciation- Building" >Depreciation- Building </option>
+                    <option value="Depreciation- Furniture" >Depreciation- Furniture </option>
+                    <option value="Discount Allowed" > Discount Allowed</option>        
+                    <option value="General Expenses" > General Expenses</option>            
+  
+           
+                </select>
+            </div>
+
+            <div id="expenses2">
+                <h5 class="text-name">Distribution Expenses </h5>
+                <select style="width: 70%;" class="text-box" onchange="insertFunc(this.value,'distribution expenses')" name="incomes">
+                    <option value="Default">---Select---</option>
+                    <option value="Cariage Outward" > Cariage Outward</option>
+                    <option value="Advertising" >Advertising </option>
+                    <option value="Sales Expenses" > Sales Expenses</option>
+                    <option value="Repair Vehicles" >Repair Vehicles </option>             
+                    <option value="Depreciation- Motor Vehicle" > Depreciation- Motor Vehicle</option>
+                    <option value="Promotion expenses" >Promotion expenses </option>             
+                    <option value="Bad debts" >Bad debts </option>
+                    <option value="Sale commision" >Sale commision </option>
+                    <option value="Motor Expenses " >Motor Expenses </option>
+
+                </select>
+            </div>
+
+            <div id="expenses3">
+                <h5 class="text-name">Financial Expenses </h5>
+                <select style="width: 70%;" class="text-box" onchange="insertFunc(this.value,'financial expenses')" name="incomes">
+                    <option value="Default">---Select---</option>
+                    <option value="Bank charges" > Bank charges</option>
+                    <option value="loan interests" > loan interests</option>
+                    <option value="OD interests" >OD interests </option>
+                </select>
+
+            </div>
+            <div id="expenses4">
+                <h5 class="text-name">Other Expenses </h5>
+                <select style="width: 70%;" class="text-box" onchange="insertFunc(this.value,'other expenses')" name="incomes">
+                    <option value="Default">---Select---</option>
+                    <option value="Sundry Expenses" >Sundry Expenses</option>
+                    <option value="Other Expenses" >Other Expenses</option>
+
+
+                </select>
+            </div>
+
+            <div id="assets1">
+                <h5 class="text-name">Non-current Assets</h5>
+                <select style="width: 70%;" class="text-box" onchange="insertFunc(this.value,'non-current assets')" name="incomes">
+                    <option value="Default">---Select---</option>
+                    <option value="Land" >Land </option>
+                    <option value=" Buildings" >  Buildings</option>
+                    <option value="Furniture" > Furniture</option>
+                    <option value="Vehicles" >Vehicles </option>   
+                    <option value=" Fixtures" >  Fixtures</option>          
+                    <option value="Machinery" > Machinery</option>  
+                    <option value="Investments" >Investments </option>           
+                </select>
+            </div>
+            <div id="assets2">
+                <h5 class="text-name"> Current Assets</h5>
+                <select style="width: 70%;" class="text-box" onchange="insertFunc(this.value,'current assets')" name="incomes">
+                    <option value="Default">---Select---</option>
+                    <option value="Debtors/ Receivables" >Debtors/ Receivables</option>
+                    <option value="Prepaid Expenses" > Prepaid Expenses</option>
+                    <option value="Cash at Bank" >Cash at Bank </option>             
+                    <option value="Cash in Hand" >Cash in Hand</option>             
+
+                </select>
+            </div>
+            <div id="liabilities1">
+                <h5 class="text-name">Non-current Liabilities</h5>
+                <select style="width: 70%;" class="text-box" onchange="insertFunc(this.value,'non-current liabilities')" name="incomes">
+                     <option value="Default">---Select---</option>
+                    <option value="Bank Loan" >Bank Loan </option>
+                    <option value=" Other Loans" >  Other Loans</option>
+          
+                </select>
+            </div>
+            <div id="liabilities2">
+                <h5 class="text-name">Current Liabilities</h5>
+                <select style="width: 70%;" class="text-box" onchange="insertFunc(this.value,'current liabilities')" name="incomes">
+                    <option value="Default">---Select---</option>
+                    <option value=" Creditors/Payables" > Creditors/Payables</option>
+                    <option value="Current propotion of the loan" > Current propotion of the  loan</option>
+                    <option value="Accrued  Expenses" >Accrued  Expenses </option>             
+                    <option value="Prepaid Incomes" > Prepaid Incomes</option>            
+                </select>
+            </div>
+
+        </div>
+
+        <div id="buttonField">
+            <button id="check" onclick="funcTotal()"> Total</button>
+            <button id="submit" onclick="validateForm()"> Submit</button>
+        </div>
+        <div>
+
+            <div id="main4">
+                <h2 id="header1"> </h2>
+                <h2 id="header2"> </h2>
+                <h2 id="header3"> </h2>
+            </div>
+            <div id="div-table2">
+                <table id="table2">
+                    <tr>
+                        <th class="lr" style="width: 400px; color: white;" id="r1c1"> nothing </th>
+                        <th class="lr" style="width: 130px;" id="r1c2"></th>
+                        <th class="lr" style="width: 130px;" id="r1c3"></th>
+                    </tr>
+                    <tr>
+                        <td id="r2c1" class="lr">Sales</td>
+                        <td id="r2c2" class="lr"> </td>
+                        <td id="r2c3" class="lr"> </td>
+                    </tr>
+                    <tr>
+                        <td id="r3c1" class="lr">(-) Sales Return</td>
+                        <td id="r3c2" class="lr"> </td>
+                        <td id="r3c3" class="lr"> </td>
+                    </tr>
+                    <tr>
+                        <td id="r4c1" class="lr"> <u> (-) Cost of Sales </u> </td>
+                        <td id="r4c2" class="lr"> </td>
+                        <td id="r4c3" class="lr"> </td>
+                    </tr>
+                    <tr>
+                        <td id="r5c1" class="lr">&nbsp&nbsp&nbsp&nbspOpening Stock</td>
+                        <td id="r5c2" class="lr"> </td>
+                        <td id="r5c3" class="lr"> </td>
+                    </tr>
+                    <tr>
+                        <td id="r6c1" class="lr">&nbsp&nbsp&nbsp&nbspPurchases</td>
+                        <td id="r6c2" class="lr"> </td>
+                        <td id="r6c3" class="lr"> </td>
+                    </tr>
+                    <tr>
+                        <td id="r7c1" class="lr">&nbsp&nbsp&nbsp&nbspFreight Charges</td>
+                        <td id="r7c2" class="lr"> </td>
+                        <td id="r7c3" class="lr"> </td>
+                    </tr>
+                    <tr>
+                        <td id="r8c1" class="lr">&nbsp&nbsp&nbsp&nbspCarriage Charges</td>
+                        <td id="r8c2" class="lr"> </td>
+                        <td id="r8c3" class="lr"> </td>
+                    </tr>
+                    <tr>
+                        <td id="r9c1" class="lr"> &nbsp&nbsp&nbsp&nbspCustom Duty</td>
+                        <td id="r9c2" class="lr"> </td>
+                        <td id="r9c3" class="lr"> </td>
+                    </tr>
+                    <tr>
+                        <td id="r10c1" class="lr"> &nbsp&nbsp&nbsp&nbsp(-)Closing Stock</td>
+                        <td id="r10c2" class="lr"> </td>
+                        <td id="r10c3" class="lr"> </td>
+                    </tr>
+                    <tr>
+                        <td id="r11c1" class="lr">&nbsp&nbsp&nbsp&nbsp(-)Purchase Return </td>
+                        <td id="r11c2" class="lru"> </td>
+                        <td id="r11c3" class="lru"> </td>
+                    </tr>
+                    <tr>
+                        <td id="r12c1" class="lr" style=" color: white;">Equity</td>
+                        <td id="r12c2" class="lr"> </td>
+                        <td id="r12c3" class="lr"> </td>
+                    </tr>
+                    <tr>
+                        <td id="r13c1" class="lr"> <b> GROSS PROFIT </b></td>
+                        <td id="r13c2" class="lr"> </td>
+                        <td id="r13c3" class="lr"> </td>
+                    </tr>
+                    <tr>
+                        <td id="r14c1" class="lr" style=" color: white;"> a </td>
+                        <td id="r14c2" class="lr"> </td>
+                        <td id="r14c3" class="lr"> </td>
+                    </tr>
+                    <tr>
+                        <td id="r15c1" class="lr"> <u> Other Income </u> </td>
+                        <td id="r15c2" class="lr"> </td>
+                        <td id="r15c3" class="lr"> </td>
+                    </tr>
+                    <tr>
+                        <td id="r16c1" class="lr" style=" color: white;"> a</td>
+                        <td id="r16c2" class="lr"> </td>
+                        <td id="r16c3" class="lr"> </td>
+                    </tr>
+                    <tr>
+                        <td id="r17c1" class="lr"><u> Administrative Expenses</u></td>
+                        <td id="r17c2" class="lr"> </td>
+                        <td id="r17c3" class="lr"> </td>
+                    </tr>
+                    <tr>
+                        <td id="r18c1" class="lr" style=" color: white;">a</td>
+                        <td id="r18c2" class="lr"> </td>
+                        <td id="r18c3" class="lr"> </td>
+                    </tr>
+                    <tr>
+                        <td id="r19c1" class="lr"><u> Distribution Expenses</u></td>
+                        <td id="r19c2" class="lr"> </td>
+                        <td id="r19c3" class="lr"> </td>
+                    </tr>
+                    <tr>
+                        <td id="r20c1" class="lr" style=" color: white;">a</td>
+                        <td id="r20c2" class="lr"> </td>
+                        <td id="r20c3" class="lr"> </td>
+                    </tr>
+                    <tr>
+                        <td id="r21c1" class="lr"><u> Financial Expenses</u></td>
+                        <td id="r21c2" class="lr"> </td>
+                        <td id="r21c3" class="lr"> </td>
+                    </tr>
+                    <tr>
+                        <td id="r22c1" class="lr" style=" color: white;">a</td>
+                        <td id="r22c2" class="lr"> </td>
+                        <td id="r22c3" class="lr"> </td>
+                    </tr>
+                    <tr>
+                        <td id="r23c1" class="lr"><u> Other Expenses</u></td>
+                        <td id="r23c2" class="lr"> </td>
+                        <td id="r23c3" class="lr"> </td>
+                    </tr>
+                    <tr>
+                        <td id="r24c1" class="lr" style=" color: white;">a</td>
+                        <td id="r24c2" class="lr"> </td>
+                        <td id="r24c3" class="lr"> </td>
+                    </tr>
+                    <tr>
+                        <td id="r25c1" class="lr"><b> NET PROFIT </b></td>
+                        <td id="r25c2" class="lr"> </td>
+                        <td id="r25c3" class="lr"> </td>
+                    </tr>
+                    <tr>
+                        <td id="r26c1" class="lru" style=" color: white;">a</td>
+                        <td id="r26c2" class="lru"> </td>
+                        <td id="r26c3" class="lru"> </td>
+                    </tr>
+                </table>
+            </div>
+
+        </div>
+
+        <div id="main5">
+            <h2 id="header4"> </h2>
+            <h2 id="header5"> </h2>
+            <h2 id="header6"> </h2>
+        </div>
+        <div id="div-table3">
+            <table id="table3">
+                <tr>
+                    <th class="lr" style="width: 400px; color: white;border-top:black 2px solid ;" id="r27c1"> nothing </th>
+                    <th class="lr" style="width: 130px;border-top:black 2px solid ;" id="r27c2"></th>
+                    <th class="lr" style="width: 130px;border-top:black 2px solid ;" id="r27c3"></th>
+                </tr>
+                <tr>
+                    <td id="r28c1" class="lr"><u>Non-current Assets</u></td>
+                    <td id="r28c2" class="lr"> </td>
+                    <td id="r28c3" class="lr"> </td>
+                </tr>
+                <tr>
+                    <td id="r29c1" class="lr" style=" color: white;">s</td>
+                    <td id="r29c2" class="lr"> </td>
+                    <td id="r29c3" class="lr"> </td>
+                </tr>
+                <tr>
+                    <td id="r30c1" class="lr"> <u>Current Assets</u></td>
+                    <td id="r30c2" class="lr"> </td>
+                    <td id="r30c3" class="lr"> </td>
+                </tr>
+                <tr>
+                    <td id="r31c1" class="lr">Closing Stock </td>
+                    <td id="r31c2" class="lr"> </td>
+                    <td id="r31c3" class="lr"> </td>
+                </tr>
+                <tr>
+                    <td id="r32c1" class="lr" style=" color: white;">a </td>
+                    <td id="r32c2" class="lr"> </td>
+                    <td id="r32c3" class="lr"> </td>
+                </tr>
+                <tr>
+                    <td id="r33c1" class="lr"> <b>TOTAL ASSETS</b></td>
+                    <td id="r33c2" class="lr"> </td>
+                    <td id="r33c3" class="lr"> </td>
+                </tr>
+                <tr>
+                    <td id="r34c1" class="lr" style=" color: white;">a </td>
+                    <td id="r34c2" class="lr"> </td>
+                    <td id="r34c3" class="lr"> </td>
+                </tr>
+                <tr>
+                    <td id="r35c1" class="lr"><u>Owner's Equity</u></td>
+                    <td id="r35c2" class="lr"> </td>
+                    <td id="r35c3" class="lr"> </td>
+                </tr>
+                <tr>
+                    <td id="r36c1" class="lr">Equity</td>
+                    <td id="r36c2" class="lr"> </td>
+                    <td id="r36c3" class="lr"> </td>
+                </tr>
+                <tr>
+                    <td id="r37c1" class="lr">Net Profit</td>
+                    <td id="r37c2" class="lr"> </td>
+                    <td id="r37c3" class="lr"> </td>
+                </tr>
+                <tr>
+                    <td id="r38c1" class="lr">Drawings</td>
+                    <td id="r38c2" class="lru"> </td>
+                    <td id="r38c3" class="lru"> </td>
+                </tr>
+                <tr>
+                    <td id="r39c1" class="lr" style=" color: white;">a</td>
+                    <td id="r39c2" class="lr"> </td>
+                    <td id="r39c3" class="lr"> </td>
+                </tr>
+                <tr>
+                    <td id="r40c1" class="lr"><u>Non-current Liabilities</u></td>
+                    <td id="r40c2" class="lr"> </td>
+                    <td id="r40c3" class="lr"> </td>
+                </tr>
+                <tr>
+                    <td id="r41c1" class="lr" style=" color: white;"> a</td>
+                    <td id="r41c2" class="lr"> </td>
+                    <td id="r41c3" class="lr"> </td>
+                </tr>
+                <tr>
+                    <td id="r42c1" class="lr"><u>current Liabilities</u></td>
+                    <td id="r42c2" class="lr"> </td>
+                    <td id="r42c3" class="lr"> </td>
+                </tr>
+                <tr>
+                    <td id="r43c1" class="lr" style=" color: white;"> a</td>
+                    <td id="r43c2" class="lr"> </td>
+                    <td id="r43c3" class="lr"> </td>
+                </tr>
+
+                <tr>
+                    <td id="r44c1" class="lr"><b> TOTAL EQUITY AND LIABILITIES</b></td>
+                    <td id="r44c2" class="lr"> </td>
+                    <td id="r44c3" class="lr"> </td>
+                </tr>
+                <tr>
+                    <td id="r45c1" class="lr" style=" color: white;border-bottom:black 2px solid"> a</td>
+                    <td id="r45c2" class="lr" style=" color: white;border-bottom:black 2px solid"> </td>
+                    <td id="r45c3" class="lr" style=" color: white;border-bottom:black 2px solid"> </td>
+                </tr>
+            </table>
+        </div>
+        <div id="buttonField2">
+            <button id="back" onclick="funcBack()"> Back</button>
+
+        </div>
+    </div>
+    <script src="Accountatia.js"></script>
+</body>
+
+
+
+</html>
